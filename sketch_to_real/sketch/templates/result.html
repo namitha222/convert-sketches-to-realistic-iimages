@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sketch to Real - Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ff758c, #ff7eb3, #b38cff, #758cff, #75daff, #75ffab);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e, #fecfef, #fe6a6a, #ff99ac);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 20px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        .random-element {
+            font-size: 36px;
+            color: #fff;
+            position: absolute;
+        }
+        .random-element.left {
+            left: 20px;
+            top: 20px;
+        }
+        .random-element.right {
+            right: 20px;
+            top: 20px;
+        }
+        .message {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="random-element left">🌟</div>
+        <div class="random-element right">🎉</div>
+        <h1>Your Sketch has been Converted!</h1>
+        <img src="{{ predicted_image_url }}" alt="Predicted Image">
+        <p class="message">Behold the magic of transformation!</p>
+        <a href="{% url 'index' %}">Try another sketch</a>
+    </div>
+</body>
+</html>
